@@ -92,14 +92,6 @@ body {
     position: relative;
 }
 
-.timeline-image {
-    width: 100%;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 4px;
-    margin-bottom: 10px;
-}
-
 @media (max-width: 992px) {
     .timeline-segment {
         min-width: 100%;
@@ -243,4 +235,8 @@ body {
         font-size: 1.2rem;
         text-align: center;
     }
-} 
+}
+
+.card-img-top {
+    height: 120px !important;
+}
