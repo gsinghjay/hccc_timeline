@@ -69,7 +69,7 @@
     </xsl:template>
 
     <xsl:template match="event">
-        <div class="timeline-item card border-0 shadow-sm h-100 aspect-ratio-1x1">
+        <div class="timeline-item card border-0 shadow-sm h-100 aspect-ratio-1x1 rounded-0">
             <img>
                 <xsl:attribute name="src">
                     <xsl:value-of select="image"/>
@@ -77,7 +77,7 @@
                 <xsl:attribute name="alt">
                     <xsl:value-of select="title"/>
                 </xsl:attribute>
-                <xsl:attribute name="class">card-img-top object-fit-cover</xsl:attribute>
+                <xsl:attribute name="class">card-img-top object-fit-cover rounded-0</xsl:attribute>
             </img>
             <div class="card-body d-flex flex-column p-3">
                 <div class="text-primary fw-semibold small mb-1">
