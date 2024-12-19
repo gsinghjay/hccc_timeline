@@ -62,7 +62,7 @@
     </xsl:template>
 
     <xsl:template match="event">
-        <div class="timeline-item">
+        <div class="timeline-item card border-0 shadow-sm">
             <img>
                 <xsl:attribute name="src">
                     <xsl:value-of select="image"/>
@@ -70,14 +70,14 @@
                 <xsl:attribute name="alt">
                     <xsl:value-of select="title"/>
                 </xsl:attribute>
-                <xsl:attribute name="class">timeline-image</xsl:attribute>
+                <xsl:attribute name="class">card-img-top timeline-image</xsl:attribute>
             </img>
-            <div class="timeline-content">
-                <div class="timeline-date">
+            <div class="card-body p-3">
+                <div class="text-primary fw-semibold small mb-1">
                     <xsl:value-of select="date"/>
                 </div>
-                <h4><xsl:value-of select="title"/></h4>
-                <p><xsl:value-of select="description"/></p>
+                <h4 class="card-title h6 mb-1"><xsl:value-of select="title"/></h4>
+                <p class="card-text small text-secondary mb-0"><xsl:value-of select="description"/></p>
             </div>
         </div>
     </xsl:template>
