@@ -183,6 +183,11 @@ body {
         gap: 30px 20px;
         margin-top: 0;
     }
+
+    /* Hide all connecting lines in mobile view */
+    .connecting-line-container {
+        display: none;
+    }
 }
 
 @media (max-width: 576px) {
