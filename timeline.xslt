@@ -37,20 +37,27 @@
                 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
                 <script>
                     function adjustConnectingLines() {
-                        const timelineItems = document.querySelectorAll('.timeline-item');
+                        const yearGroups = document.querySelectorAll('.events-group');
                         
-                        timelineItems.forEach(item => {
-                            // Create connecting line container
-                            const lineContainer = document.createElement('div');
-                            lineContainer.className = 'connecting-line-container';
+                        yearGroups.forEach(group => {
+                            const timelineItems = group.querySelectorAll('.timeline-item');
                             
-                            // Create the actual line
-                            const line = document.createElement('div');
-                            line.className = 'connecting-line';
-                            
-                            // Insert the line before the timeline item
-                            lineContainer.appendChild(line);
-                            item.parentNode.insertBefore(lineContainer, item);
+                            timelineItems.forEach((item, index) => {
+                                // Skip the first item in each year group
+                                if (index === 0) return;
+                                
+                                // Create connecting line container
+                                const lineContainer = document.createElement('div');
+                                lineContainer.className = 'connecting-line-container';
+                                
+                                // Create the actual line
+                                const line = document.createElement('div');
+                                line.className = 'connecting-line';
+                                
+                                // Insert the line before the timeline item
+                                lineContainer.appendChild(line);
+                                item.parentNode.insertBefore(lineContainer, item);
+                            });
                         });
                     }
 
